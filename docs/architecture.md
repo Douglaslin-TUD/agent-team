@@ -26,11 +26,11 @@ A production-grade multi-agent team for software development, built on Claude Co
 
 | Tier | Model | Agents | Rationale |
 |------|-------|--------|-----------|
-| **Scout** | Haiku | explorer | Fast search, no reasoning needed |
-| **Brain** | Opus | architect, reviewer, security-auditor | Design decisions, subtle bug/vulnerability detection |
-| **Hands** | Sonnet | implementer, tester, doc-writer | Execution — follows specs, writes code/tests/docs |
+| **Brain** | Opus | architect, reviewer | Design decisions, subtle bug detection — highest-value reasoning |
+| **Hands** | Sonnet | explorer, implementer, tester, security-auditor | Exploration (chain start quality matters), execution, pattern-matching audit |
+| **Light** | Haiku | doc-writer | Chain end — reads code, writes descriptions, errors easily caught |
 
-**Why this split:** Research shows architecture quality is the bottleneck (everything downstream depends on it). Review quality catches the 67.3% of AI-generated code that would otherwise be rejected. Implementation and testing are well-defined execution tasks where Sonnet excels.
+**Why this split:** Research shows architecture quality is the bottleneck (everything downstream depends on it). Review quality catches the 67.3% of AI-generated code that would otherwise be rejected. Explorer needs sonnet-level reasoning as the chain start — poor exploration cascades downstream. Security auditor is primarily pattern matching, with the opus reviewer as a second line of defense.
 
 ---
 

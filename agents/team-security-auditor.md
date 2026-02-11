@@ -13,7 +13,7 @@ disallowedTools:
   - Write
   - Edit
   - NotebookEdit
-model: opus
+model: sonnet
 memory: project
 maxTurns: 30
 ---

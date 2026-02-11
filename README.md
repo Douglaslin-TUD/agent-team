@@ -12,19 +12,19 @@ Seven specialized AI agents that work as a coordinated team to build software. E
 
 | Agent | Model | Role |
 |-------|-------|------|
-| **team-explorer** | Haiku | Codebase researcher. Searches files, traces code paths, maps architecture. Read-only. |
+| **team-explorer** | Sonnet | Codebase researcher. Searches files, traces code paths, maps architecture. Read-only. |
 | **team-architect** | Opus | System designer. Analyzes tradeoffs, produces design specs. Requires human approval. |
 | **team-implementer** | Sonnet | Developer. Writes code following the approved design. Self-fixes up to 3 iterations. |
 | **team-tester** | Sonnet | Test engineer. Writes tests in parallel with implementation. |
 | **team-reviewer** | Opus | Code reviewer. Finds bugs, logic errors, convention violations. Read-only. |
-| **team-security-auditor** | Opus | Security specialist. OWASP Top 10 audit. Read-only. |
-| **team-doc-writer** | Sonnet | Documentation writer. Updates docs after all changes are finalized. |
+| **team-security-auditor** | Sonnet | Security specialist. OWASP Top 10 audit. Read-only. |
+| **team-doc-writer** | Haiku | Documentation writer. Updates docs after all changes are finalized. |
 
-### Model Strategy
+### Model Strategy (2 Opus + 4 Sonnet + 1 Haiku)
 
-- **Opus** for decisions (architect, reviewer, auditor) — deep reasoning where quality is the bottleneck
-- **Sonnet** for execution (implementer, tester, doc-writer) — follows specs, strong coding ability
-- **Haiku** for reconnaissance (explorer) — fast file search and reading
+- **Opus** for decisions (architect, reviewer) — deep reasoning where quality is the bottleneck
+- **Sonnet** for exploration + execution (explorer, implementer, tester, security-auditor) — chain-start quality matters; pattern matching and spec-following
+- **Haiku** for documentation (doc-writer) — chain end, reads code and writes descriptions, errors easily caught
 
 ## Workflow
 

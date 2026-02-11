@@ -14,7 +14,7 @@ disallowedTools:
   - Write
   - Edit
   - NotebookEdit
-model: haiku
+model: sonnet
 maxTurns: 30
 ---
 

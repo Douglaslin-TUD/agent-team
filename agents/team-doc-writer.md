@@ -10,7 +10,7 @@ tools:
   - Edit
   - Glob
   - Grep
-model: sonnet
+model: haiku
 maxTurns: 30
 ---
 
